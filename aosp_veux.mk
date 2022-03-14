@@ -13,6 +13,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_DISABLE_EPPE := true
 
 # Inherit from veux device
 $(call inherit-product, device/xiaomi/veux/device.mk)
