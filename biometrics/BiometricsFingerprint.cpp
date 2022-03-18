@@ -225,13 +225,6 @@ IBiometricsFingerprint* BiometricsFingerprint::getInstance() {
     return sInstance;
 }
 
-IXiaomiFingerprint* BiometricsFingerprint::getXiaomiInstance() {
-    if (!sInstance) {
-      sInstance = new BiometricsFingerprint();
-    }
-    return sInstance;
-}
-
 xiaomi_fingerprint_device_t* BiometricsFingerprint::openHal(const char *class_name) {
     int err;
     const hw_module_t *hw_mdl = nullptr;
@@ -370,11 +363,6 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
             break;
     }
 }
-
-Return<int32_t> BiometricsFingerprint::extCmd(int32_t cmd, int32_t param) {
-    return mDevice->extCmd(mDevice, cmd, param);
-}
-
 
 Return<bool> BiometricsFingerprint::isUdfps(uint32_t /* sensorId */) {
     return false;

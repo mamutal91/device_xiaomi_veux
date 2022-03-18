@@ -158,11 +158,6 @@ typedef struct xiaomi_fingerprint_device {
      */
     int (*authenticate)(struct xiaomi_fingerprint_device *dev, uint64_t operation_id, uint32_t gid);
 
-    /*
-     * Call a Xiaomi fingerprint extension command.
-     */
-    int (*extCmd)(struct xiaomi_fingerprint_device *dev, int32_t cmd, int32_t param);
-
     /* 
      * Reserved for backward binary compatibility
      */
